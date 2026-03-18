@@ -14,7 +14,7 @@
 			racs.Megjelenit();
 
 			Console.WriteLine("\n7. feladat");
-			Console.WriteLine($"Leghosszabb függgőleges szó: {racs.MaxFuggoleges()}");
+			Console.WriteLine($"Leghosszabb függgőleges szó: {racs.MaxFuggoleges()} karakter hosszú");
 		}
     }
 }
