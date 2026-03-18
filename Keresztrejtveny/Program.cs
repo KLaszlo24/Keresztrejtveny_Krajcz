@@ -12,6 +12,9 @@
 
 			Console.WriteLine("\n6. feladat");
 			racs.Megjelenit();
+
+			Console.WriteLine("\n7. feladat");
+			Console.WriteLine($"Leghosszabb függgőleges szó: {racs.MaxFuggoleges()}");
 		}
     }
 }
