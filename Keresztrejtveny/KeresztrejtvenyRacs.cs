@@ -17,7 +17,7 @@ namespace Keresztrejtveny
 
 		public KeresztrejtvenyRacs(string fajlNev)
 		{
-			//BeolvasAdatsorok(fajlNev);
+			BeolvasAdatsorok(fajlNev);
 
 			SorokDb = Adatsorok.Count;
 			OszlopokDb = Adatsorok[0].Length;
@@ -25,7 +25,23 @@ namespace Keresztrejtveny
 			Racs = new char[SorokDb + 2, OszlopokDb + 2];
 			Sorszamok = new int[SorokDb + 2, OszlopokDb + 2];
 
-			//FeltoltRacs();
+			FeltoltRacs();
+		}
+
+		private void BeolvasAdatsorok(string fajlNev)
+		{
+			Adatsorok = new List<string>(File.ReadAllLines(fajlNev));
+		}
+
+		private void FeltoltRacs()
+		{
+			for (int i = 0; i < SorokDb; i++)
+			{
+				for (int j = 0; j < OszlopokDb; j++)
+				{
+					Racs[i + 1, j + 1] = Adatsorok[i][j];
+				}
+			}
 		}
 	}
 }
