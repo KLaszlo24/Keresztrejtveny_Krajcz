@@ -43,5 +43,20 @@ namespace Keresztrejtveny
 				}
 			}
 		}
+
+		public void Megjelenit()
+		{
+			for(int i=1; i < SorokDb; i++)
+			{
+				for(int j =1; j < OszlopokDb; j++)
+				{
+					if (Racs[i, j] == '-')
+						Console.Write("[]");
+					else
+						Console.Write("##");
+				}
+				Console.WriteLine();
+			}
+		}
 	}
 }
