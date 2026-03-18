@@ -14,5 +14,18 @@ namespace Keresztrejtveny
 
 		public int SorokDb { get;  set; }
 		public int OszlopokDb { get;  set; }
+
+		public KeresztrejtvenyRacs(string fajlNev)
+		{
+			//BeolvasAdatsorok(fajlNev);
+
+			SorokDb = Adatsorok.Count;
+			OszlopokDb = Adatsorok[0].Length;
+
+			Racs = new char[SorokDb + 2, OszlopokDb + 2];
+			Sorszamok = new int[SorokDb + 2, OszlopokDb + 2];
+
+			//FeltoltRacs();
+		}
 	}
 }
